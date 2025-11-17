@@ -6,18 +6,22 @@ export default function AboutPage() {
     <div className="bg-[#2f2e2d7e] text-gray-800">
       {/* Hero Section */}
       <section className="bg-[url('/coffee-hero.jpg')] bg-cover bg-center bg-no-repeat h-[50vh] flex items-center justify-center">
-        <div className="backdrop-blur-sm bg-black p-8 rounded-xl">
+        <div className="backdrop-blur-sm bg-black p-8 rounded-xl flex gap-4 ">
           <h1 className="text-xl md:text-5xl font-serif text-amber-700 tracking-wide">
             About Our Coffee Shop
           </h1>
+          <img src="/images/about.png" alt="about" className="w-11 h-11 md:w-15 md:h-15"/>
         </div>
       </section>
 
-      {/* Story Section */}
+      
       <section className="max-w-6xl mx-auto px-6 py-16 bg-amber-100 rounded-2xl">
-        <h2 className="text-3xl font-bold text-amber-700 text-center mb-6">
+        <div className="flex justify-center gap-4">
+          <h2 className="text-3xl font-bold text-amber-700 text-center mb-6">
           Our Story
-        </h2>
+         </h2>
+         <img src="/images/storyboard.png" alt="story" className="w-11 h-11"/>
+        </div>
 
         <p className="text-lg text-center text-gray-700 leading-relaxed max-w-3xl mx-auto">
           Founded with passion and love for handcrafted beverages, our coffee shop
@@ -43,11 +47,14 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Stats Section */}
+      
       <section className="bg-amber-100 py-16 mt-8">
-        <h2 className="text-3xl font-bold text-center text-amber-800 mb-10">
+        <div className="flex justify-center gap-4">
+          <h2 className="text-3xl font-bold text-center text-amber-800 mb-10">
           Our Achievements
         </h2>
+        <img src="images/achivements.png" alt="achieve" className="w-11 h-11"/>
+        </div>
 
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
           <div>
@@ -72,12 +79,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Mission Section */}
+     
       <section className="max-w-6xl mx-auto px-6 py-16">
         <div className="bg-amber-100 p-10 rounded-2xl shadow-xl">
-          <h2 className="text-3xl font-bold text-amber-800 text-center mb-6">
+          <div className="flex justify-center gap-4">
+            <h2 className="text-3xl font-bold text-amber-800 text-center mb-6">
             Our Mission
           </h2>
+          <img src="/images/mountain.png" alt="mission" className="w-11 h-11"/>
+          </div>
 
           <p className="text-lg text-gray-700 leading-relaxed text-center">
             To bring exceptional coffee, comfort, and community together under
@@ -88,7 +98,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Footer */}
+      
       <footer className="bg-amber-800 text-black text-center py-6">
         <p>&copy; {new Date().getFullYear()} CoffeeShop. All rights reserved.</p>
       </footer>

@@ -12,8 +12,11 @@ export default function NavBar() {
   return (
     <nav className="bg-black shadow-lg sticky top-0 z-50">
        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold text-amber-700">
-          LaMoon coffee <FontAwesomeIcon icon={faMugSaucer} />
+        <Link href="/" className="text-2xl font-extrabold text-amber-700 font-mono">
+          <div className="flex justify-center gap-3">
+            <h1>LaMoon Coffee</h1>
+            <img src="/images/coffee-cup.png" className="w-8 h-8"/>
+          </div>
         </Link>
 
         <div className="relative md:hidden">
