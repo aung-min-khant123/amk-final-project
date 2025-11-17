@@ -56,7 +56,7 @@ export default function ContactPage() {
           <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
             <div className="flex flex-col">
-              <label className="font-medium">Your Name</label>
+              <label className="font-mono">Your Name</label>
               <input
                 type="text"
                 className="mt-2 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-700"
@@ -66,7 +66,7 @@ export default function ContactPage() {
 
             
             <div className="flex flex-col">
-              <label className="font-medium">Your Email</label>
+              <label className="font-mono">Your Email</label>
               <input
                 type="email"
                 className="mt-2 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-700"
@@ -76,7 +76,7 @@ export default function ContactPage() {
 
             
             <div className="flex flex-col md:col-span-2">
-              <label className="font-medium">Message</label>
+              <label className="font-mono">Message</label>
               <textarea
                 rows="4"
                 className="mt-2 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-700"

@@ -10,7 +10,11 @@ export default function NavBar() {
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
 
   return (
-    <nav className="bg-black shadow-lg sticky top-0 z-50">
+    <nav
+  className={`bg-white/5 backdrop-blur-xl md:bg-black shadow-lg sticky top-0 z-50 md:h-17 transition-all duration-300 
+  ${isOpen ? "h-65" : "h-auto"} md:h-17`}
+>
+
        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Link href="/" className="text-2xl font-extrabold text-amber-700 font-mono">
           <div className="flex justify-center gap-3">
@@ -71,8 +75,8 @@ export default function NavBar() {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-stone-300/50 backdrop-blur-2xl shadow-lg flex justify-center mx-2.5 mb-3 rounded-xl">
-          <ul className="flex flex-col space-y-2 py-3 px-5 text-white font-serif">
+        <div className="md:hidden bg-white/5 backdrop-blur-lg shadow-lg flex justify-center mx-2.5 my-5 rounded-xl">
+          <ul className="flex flex-col space-y-3.5 py-3 px-5 text-gray-100 font-mono">
             <li>
               <Link href="/">Home</Link>
             </li>
@@ -91,3 +95,4 @@ export default function NavBar() {
     </nav>
   );
 }
+
