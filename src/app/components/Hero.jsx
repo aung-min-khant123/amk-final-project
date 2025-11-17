@@ -8,6 +8,7 @@ function Hero() {
           autoPlay
           loop
           muted
+          
           className="absolute w-full h-full object-cover bg-fixed"
         >
           <source

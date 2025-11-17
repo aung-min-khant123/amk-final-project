@@ -21,7 +21,6 @@ const cartSlice = createSlice({
         state.cartItems.push({ ...item, quantity: 1 });
       }
 
-      // Update totals
       state.totalQuantity = state.cartItems.reduce((t, i) => t + i.quantity, 0);
       state.totalPrice = state.cartItems.reduce(
         (t, i) => t + i.price * i.quantity,
