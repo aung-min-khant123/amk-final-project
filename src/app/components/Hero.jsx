@@ -19,12 +19,12 @@ function Hero() {
         </video>
         <div className="container mx-auto h-full flex flex-col xl-flex-row justify-center z-30 relative">
           <div className="flex flex-col justify-center items-center">
-            <h1 className=" font-sans text-7xl md:text-8xl text-center font-extrabold" >
-              <span className="text-[black] font-extrabold">Coffee</span>& Joy
+            <h1 className=" text-4xl md:text-5xl text-center font-mono text-red-900" >
+              <span className="text-amber-700 font-mono">Coffee</span>&Joy
             </h1>
-            <p className="text-xl text-white font-extrabold">
+            <p className="text-lg md:text-3xl font-serif mt-4 text-amber-600">
               Experiance the joy of expectional coffee in our cozy space, where
-              every cup is crafted with passion and warmth{" "}
+              every cup is crafted with passion and warmth
             </p>
           </div>
         </div>

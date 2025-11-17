@@ -118,7 +118,7 @@ export const products = [
   },
   {
     id: 115,
-    name: "Mango Smoothie",
+    name: "Strawberry Smoothie",
     image: "/images/strawberrysmoothie.png",
     price: 5.2,
     category: "Smoothie",
