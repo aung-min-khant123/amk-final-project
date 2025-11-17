@@ -25,7 +25,10 @@ export default function CartPage() {
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-6xl">
-      <h1 className="text-3xl font-bold mb-6 text-center">🛒 Your Cart</h1>
+      <div className="flex justify-center gap-5 my-4">
+        <img src="/images/coffee.png" alt="cart" className="w-10 h-10 hover:size-14"  />
+        <h1 className="text-amber-700 text-3xl font-bold mb-6 text-center">Your Cart</h1>
+      </div>
 
       {cartItems.length === 0 ? (
         <p className="text-center text-gray-500 text-lg">Your cart is empty.</p>

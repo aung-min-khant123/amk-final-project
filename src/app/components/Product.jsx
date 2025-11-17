@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faMinus, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/app/redux/cartSlice";
 import Button from "./Button";
@@ -34,17 +34,17 @@ function Product({ product }) {
   };
 
   return (
-    <div className="border-2 rounded-lg p-3 text-center shadow-sm w-55 h-95">
+    <div className="border-2 rounded-lg p-3 text-center shadow-sm w-80 h-94 bg-[#f7f2f244] backdrop-blur-2xl">
       
       <img
         src={image}
         alt={name}
-        className="w-full h-40 object-contain mb-2"
+        className="w-full h-45 object-cover my-2 rounded-xl shadow-2xl"
       />
 
       
-      <p className="text-lg font-semibold">{name}</p>
-      <p className="text-gray-600">${price.toFixed(2)}</p>
+      <p className="text-lg font-semibold text-amber-800">{name}</p>
+      <p className="text-gray-900">${price.toFixed(2)}</p>
 
       
       <div className="flex items-center justify-center gap-4 mt-3">
@@ -72,8 +72,10 @@ function Product({ product }) {
       <div className="mt-3">
         <Button
           btnText={"Add to cart"}
+          endIcon={<FontAwesomeIcon icon={faCartShopping} />}
           onClick={handleAddToCart}
           disabled={quantity === 0}
+          
         />
       </div>
     </div>

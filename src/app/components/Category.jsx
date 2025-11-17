@@ -19,14 +19,14 @@ function Category({ menu }) {
     <div>
       <div
         key={id}
-        className="border-2 border-amber-900 rounded-2xl overflow-hidden w-55 flex flex-col 
+        className="border-2 border-amber-900 rounded-2xl overflow-hidden w-80 flex flex-col 
         items-center justify-start bg-amber-900 p-4 mb-8"
       >
         {/* Category Image */}
         <img
           src={image}
           alt={name}
-          className="w-40 h-37  object-cover border-2 border-black m-2 object-center"
+          className="w-50 h-40 object-cover border-3 border-black m-2 object-center rounded-2xl"
         />
 
         {/* Category Title */}
