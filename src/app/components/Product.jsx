@@ -34,17 +34,17 @@ function Product({ product }) {
   };
 
   return (
-    <div className="border-2 rounded-lg p-3 text-center shadow-sm w-80 h-94 bg-[#f7f2f244] backdrop-blur-2xl">
+    <div className="border border-white/30 rounded-lg p-3 text-center shadow-lg w-80 h-94 bg-white/18 backdrop-blur-lg ">
       
       <img
         src={image}
         alt={name}
-        className="w-full h-45 object-cover my-2 rounded-xl shadow-2xl"
+        className="w-full h-45 object-cover object-center my-2 rounded-xl shadow-2xl"
       />
 
       
-      <p className="text-lg font-semibold text-amber-800">{name}</p>
-      <p className="text-gray-900">${price.toFixed(2)}</p>
+      <p className="text-lg font-mono text-amber-800">{name}</p>
+      <p className="text-gray-900 font-">${price.toFixed(2)}</p>
 
       
       <div className="flex items-center justify-center gap-4 mt-3">
