@@ -14,13 +14,18 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #1c1b1bd2;
+    --background: rgba(19, 18, 18, 0.35);
     --foreground: #ededed;
   }
 }
 
 body {
-  background: var(--background); 
+  background-image: url("/images/shopview.jpg");
+  background-position: left; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   

@@ -3,7 +3,7 @@ import React from "react";
 function Hero() {
   return (
     <>
-      <div className="relative h-[94vh] text-white">
+      <div className="fixed h-[94vh] text-white w-full">
         <video
           autoPlay
           loop

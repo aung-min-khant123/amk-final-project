@@ -6,7 +6,7 @@ import Products from '../components/Products'
 function Page() {
   return (
     <>
-     <div className="bg-transparent">
+     <div className="">
        <Categories />
        {/* <Products /> */}
      </div>
