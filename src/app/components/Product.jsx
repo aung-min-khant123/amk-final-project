@@ -40,10 +40,8 @@ function Product({ product }) {
       <img
         src={image}
         alt={name}
-        className="w-full h-45 object-cover object-center my-2 rounded-xl shadow-2xl"
+        className="w-full h-45 object-cover  my-2 rounded-xl shadow-2xl"
       />
-
-      
       <p className="text-lg font-mono text-amber-800">{name}</p>
       <p className="text-white/50 font-bold font-mono">${price.toFixed(2)}</p>
 

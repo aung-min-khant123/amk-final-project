@@ -30,7 +30,16 @@ function Hero() {
               Experiance the joy of expectional coffee in our cozy space, where
               every cup is crafted with passion and warmth
             </p>
+            <div className="flex gap-4 my-6">
+              <button className="px-6 py-2 bg-black/20 backdrop-blur-md text-white font-semibold rounded-lg shadow-lg hover:bg-black/50 transition">
+                Dine in
+              </button>
+              <button className="px-6 py-2 bg-stone-700 text-white font-semibold rounded-lg shadow-lg hover:bg-stone-800 transition">
+                Take out
+              </button>
+            </div>
           </div>
+          
         </div>
       </div>
     </>

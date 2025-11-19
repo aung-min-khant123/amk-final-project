@@ -22,26 +22,26 @@ function Category({ menu }) {
         className="border border-amber-900 rounded-2xl overflow-hidden w-80 flex flex-col 
         items-center justify-start bg-white/70 p-4 mb-8"
       >
-        {/* Category Image */}
+        
         <img
           src={image}
           alt={name}
           className="w-50 h-40 object-cover border-2 border-black m-2 object-center rounded-2xl"
         />
 
-        {/* Category Title */}
-        <h3 className="text-center mt-2 text-xs font-serif text-gray-900">
+        
+        <h3 className="text-center mt-2 text-md font-serif text-gray-900">
           {name}
-          {name.toLowerCase().includes("coffee") && (
+          {name.includes("Coffee") && (
             <FontAwesomeIcon icon={faCoffee} className="ml-2" />
           )}
-          {name.toLowerCase().includes("tea") && (
+          {name.includes("Tea") && (
             <FontAwesomeIcon icon={faLeaf} className="ml-2" />
           )}
-          {name.toLowerCase().includes("smoothie") && (
+          {name.includes("Smoothie") && (
             <FontAwesomeIcon icon={faBlender} className="ml-2" />
           )}
-          {name.toLowerCase().includes("cake") && (
+          {name.includes("Cake") && (
             <FontAwesomeIcon icon={faBirthdayCake} className="ml-2" />
           )}
         </h3>

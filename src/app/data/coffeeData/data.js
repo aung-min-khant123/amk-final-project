@@ -24,6 +24,13 @@ export const MenuCategories =[
 export const products = [
   // Coffee ☕
   {
+    id: 100,
+    name: "Afogato",
+    image: "/images/afogato.png",
+    price: 5,
+    category: "Coffee",
+  },
+  {
     id: 101,
     name: "Cappuccino",
     image: "/images/capuucino.png",
@@ -63,6 +70,13 @@ export const products = [
     name: "Americano",
     image: "/images/americano.png",
     price: 4,
+    category: "Coffee"
+  },
+  {
+    id: 106,
+    name: "Tiramisu Latte",
+    image: "/images/tiramisu.png",
+    price: 5.5,
     category: "Coffee"
   },
   // Tea 🍵
