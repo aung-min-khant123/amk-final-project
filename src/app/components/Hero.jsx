@@ -4,9 +4,10 @@ function Hero() {
   return (
     <>
       <div className="fixed h-[94vh] text-white w-full">
-        <video
+         <video
           autoPlay
           loop
+           playsInline
           muted
           className="absolute w-full h-full object-cover bg-fixed"
         >
@@ -16,7 +17,7 @@ function Hero() {
             className="bg-amber-600"
           />
           Your browser does not support the video tag.
-        </video>
+        </video> 
         <div className="container mx-auto h-full flex flex-col xl-flex-row justify-center z-30 relative">
           <div className="flex flex-col justify-center items-center">
             <h1 className=" text-4xl md:text-5xl text-center font-mono text-red-900" >

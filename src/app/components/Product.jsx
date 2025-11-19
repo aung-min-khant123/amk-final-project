@@ -34,8 +34,8 @@ function Product({ product }) {
   };
 
   return (
-    <div className="border border-white/20 rounded-lg p-3 text-center shadow-lg w-80 h-94
-     bg-white/10 backdrop-blur-xs">
+    <div className="border border-white/30 rounded-lg p-3 text-center shadow-lg w-80 h-94
+     bg-white/8 backdrop-blur-xs">
       
       <img
         src={image}

@@ -20,12 +20,15 @@
 }
 
 body {
-  background-image: url("/images/shopview.jpg");
+  /* background-image: url("/images/shopview.jpg");
   background-position: left; 
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-
+  background-size: contain;
+  background-repeat: no-repeat; */
+  /* min-height: 100vh;  */
+  /* background-image: linear-gradient(to right, #bdc3c7, #2c3e50);  */
+  /* background-image: linear-gradient(to right, #000000, #434343); */
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   

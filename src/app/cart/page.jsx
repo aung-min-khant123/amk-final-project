@@ -24,7 +24,8 @@ export default function CartPage() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-6xl">
+    <div className="container mx-auto my-5 px-4 py-8 max-w-6xl bg-white/5 backdrop-blur-md rounded-2xl 
+     border-2 border-white/10">
       <div className="flex justify-center gap-5 my-4">
         <img src="/images/coffee.png" alt="cart" className="w-10 h-10 hover:size-14"  />
         <h1 className="text-amber-700 text-3xl font-bold mb-6 text-center">Your Cart</h1>
@@ -44,17 +45,16 @@ export default function CartPage() {
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="w-24 h-24 sm:w-20 sm:h-20 object-cover rounded-lg mx-auto sm:mx-0"
+                  className="w-24 h-24 sm:w-20 sm:h-20 object-contain rounded-lg mx-auto sm:mx-0"
                 />
                 <div className="text-center sm:text-left">
-                  <p className="text-[16px] font-semibold">{item.name}</p>
-                  <p className="text-gray-600 text-sm sm:text-base">
+                  <p className="text-[16px] font-mono">{item.name}</p>
+                  <p className="text-gray-900 text-sm sm:text-base">
                     ${item.price.toFixed(2)}
                   </p>
                 </div>
               </div>
 
-              
               <div className="flex items-center justify-center sm:justify-start gap-3">
                 <button
                   onClick={() => dispatch(removeFromCart(item.id))}
@@ -112,7 +112,7 @@ export default function CartPage() {
                 ${
                   checkoutSuccess
                     ? "bg-green-600"
-                    : "bg-blue-600 hover:bg-blue-700"
+                    : "bg-stone-600 hover:bg-stone-700"
                 }`}
             >
               {checkoutSuccess ? "Checkout Success" : "Proceed to Checkout"}

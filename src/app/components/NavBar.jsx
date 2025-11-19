@@ -17,13 +17,13 @@ export default function NavBar() {
   return (
     <nav
       className={`bg-gray-200/5 backdrop-blur-sm md:bg-white/10 border-2 border-white/20 
-      rounded-md mx-2 my-0.5 md:backdrop-blur-xl shadow-lg sticky top-0 z-50 md:h-17 transition-all duration-300 
+      rounded-md mx-2 my-0 md:backdrop-blur-xl shadow-lg sticky top-0 z-50 md:h-17 transition-all duration-300 
       ${isOpen ? "h-60" : "h-auto"} md:h-17`}
     >
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Link
           href="/"
-          className="text-2xl font-extrabold text-black font-mono"
+          className="text-2xl font-extrabold text-white/50 font-mono"
         >
           <div className="flex justify-center gap-3">
             <h1>LaMoon Coffee</h1>
@@ -35,7 +35,7 @@ export default function NavBar() {
           <Link href="/cart">
             <FontAwesomeIcon
               icon={faCartShopping}
-              className="text-2xl text-black"
+              className="text-2xl text-white/50"
             />
             {totalQuantity > 0 && (
               <span className="absolute -top-2 -right-3 bg-red-600 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
@@ -45,7 +45,7 @@ export default function NavBar() {
           </Link>
         </div>
 
-        <ul className="hidden md:flex space-x-8 text-black font-serif text-xl items-center">
+        <ul className="hidden md:flex space-x-8 text-white/50 font-serif text-xl items-center">
           <li>
             <Link href="/">Home</Link>
           </li>
@@ -63,7 +63,7 @@ export default function NavBar() {
             <Link href="/cart">
               <FontAwesomeIcon
                 icon={faCartShopping}
-                className=" text-black "
+                className=" text-white/50 "
               />
               {totalQuantity > 0 && (
                 <span className="absolute -top-2 -right-3 bg-red-600 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
@@ -75,7 +75,7 @@ export default function NavBar() {
         </ul>
 
         <button
-          className="md:hidden text-black/70 focus:outline-none"
+          className="md:hidden text-white/50 focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (
