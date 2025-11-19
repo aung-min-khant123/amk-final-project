@@ -4,10 +4,10 @@ function Hero() {
   return (
     <>
       <div className="fixed h-[94vh] text-white w-full">
-         <video
+        <video
           autoPlay
           loop
-           playsInline
+          playsInline
           muted
           className="absolute w-full h-full object-cover bg-fixed"
         >
@@ -17,13 +17,16 @@ function Hero() {
             className="bg-amber-600"
           />
           Your browser does not support the video tag.
-        </video> 
+        </video>
         <div className="container mx-auto h-full flex flex-col xl-flex-row justify-center z-30 relative">
-          <div className="flex flex-col justify-center items-center">
-            <h1 className=" text-4xl md:text-5xl text-center font-mono text-red-900" >
-              <span className="text-amber-700 font-mono">Coffee</span>&Joy
+          <div
+            className="flex flex-col justify-center items-center bg-white/10 
+             backdrop-blur-sm rounded-xl mx-4 my-10 border border-e-black/20 border-s-black/20"
+          >
+            <h1 className=" text-4xl md:text-5xl text-center font-mono text-black/60 my-4">
+              <span className="text-stone-700 font-mono">Coffee</span>&Joy
             </h1>
-            <p className="text-lg md:text-3xl font-serif mt-4 text-amber-600">
+            <p className="text-md md:text-3xl font-mono my-5 text-black text-center">
               Experiance the joy of expectional coffee in our cozy space, where
               every cup is crafted with passion and warmth
             </p>

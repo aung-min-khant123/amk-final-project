@@ -24,8 +24,8 @@ export default function CartPage() {
   };
 
   return (
-    <div className="container mx-auto my-5 px-4 py-8 max-w-6xl bg-white/5 backdrop-blur-md rounded-2xl 
-     border-2 border-white/10">
+    <div className="container mx-auto my-5 px-4 py-8 max-w-6xl bg-white/5 backdrop-blur-xs backdrop-opacity-40 backdrop-brightness-95 rounded-2xl 
+     border border-e-white/10 border-s-white/10">
       <div className="flex justify-center gap-5 my-4">
         <img src="/images/coffee.png" alt="cart" className="w-10 h-10 hover:size-14"  />
         <h1 className="text-amber-700 text-3xl font-bold mb-6 text-center">Your Cart</h1>
@@ -79,7 +79,7 @@ export default function CartPage() {
 
               
               <div className="text-center sm:text-right w-full sm:w-auto">
-                <p className="text-gray-700 font-semibold">
+                <p className="text-white/70 font-extrabold">
                   ${(item.price * item.quantity).toFixed(2)}
                 </p>
               </div>
@@ -87,7 +87,7 @@ export default function CartPage() {
               
               <button
                 onClick={() => dispatch(removeItemCompletely(item.id))}
-                className="text-red-600 hover:text-red-800 text-sm flex items-center gap-1 justify-center"
+                className="text-red-800 hover:text-red-800 text-sm flex items-center gap-1 justify-center"
               >
                 <FontAwesomeIcon icon={faTrash} />
                 Remove

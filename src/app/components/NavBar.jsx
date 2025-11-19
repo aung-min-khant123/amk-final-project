@@ -16,7 +16,7 @@ export default function NavBar() {
 
   return (
     <nav
-      className={`bg-gray-200/5 backdrop-blur-sm md:bg-white/10 border-2 border-white/20 
+      className={`bg-gray-200/5 backdrop-blur-sm md:bg-white/10 border border-e-white/10 border-s-white/10
       rounded-md mx-2 my-0 md:backdrop-blur-xl shadow-lg sticky top-0 z-50 md:h-17 transition-all duration-300 
       ${isOpen ? "h-60" : "h-auto"} md:h-17`}
     >
