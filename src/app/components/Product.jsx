@@ -66,8 +66,6 @@ function Product({ product }) {
           <FontAwesomeIcon icon={faPlus} />
         </button>
       </div>
-
-      
       <div className="mt-3">
         <Button
           btnText={"Add to cart"}
