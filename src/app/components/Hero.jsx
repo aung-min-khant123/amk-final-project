@@ -3,7 +3,7 @@ import Carousel from"./Carousel"
 function Hero() {
   return (
     <>
-      <div className="fixed h-[94vh] text-white w-full">
+      <div className="fixed h-[110vh] md:h-[94vh] text-white w-full">
         <video
           autoPlay
           loop
@@ -26,7 +26,7 @@ function Hero() {
             <h1 className=" text-2xl md:text-5xl text-center font-mono text-black/60 my-1 md:my-4">
               <span className="text-stone-700 font-mono">Coffee</span>&Joy
             </h1>
-            <p className="text-sm md:text-3xl font-mono my-2 md:my-5 text-black text-center">``
+            <p className="text-sm md:text-3xl font-mono my-2 md:my-5 text-black text-center">
               Experiance the joy of expectional coffee in our cozy space, where
               every cup is crafted with passion and warmth
             </p>
@@ -60,8 +60,7 @@ function Hero() {
               />
             </div>
           </div> */}
-          <Carousel/>
-          
+            <Carousel/>  
         </div>
       </div>
     </>

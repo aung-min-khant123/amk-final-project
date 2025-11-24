@@ -1,94 +1,115 @@
+// ...existing code...
 "use client";
-import React from "react";
+import React, { useState } from "react";
+import { Zoom } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
+import Button from "./Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/cartSlice";
 
-// const handleAddToCart = () => {
-//     if (quantity > 0) {
-//       for (let i = 0; i < quantity; i++) {
-//         dispatch(addToCart({ id, image, name, price }));
-//       }
-     
-//       setQuantity(0);
-//     }
-//   };
+const bestSellers = [
+  {
+    
+    id: 101,
+    name: "Cappuccino",
+    image: "/images/capuucino.png",
+    price: 4.5,
+    category: "Coffee",
+    
+  },
+  {
+   id: 103,
+    name: "Espresso",
+    image: "/images/espresso1.png",
+    price: 3.2,
+    category: "Coffee",
+  },
+  {
+    id: 100,
+    name: "Afogato",
+    image: "/images/afogato.png",
+    price: 5,
+    category: "Coffee",
+  },
+  {
+    id: 106,
+    name: "Tiramisu Latte",
+    image: "/images/tiramisu.png",
+    price: 5.5,
+    category: "Coffee"
+  },
+];
+const zoomOutProperties = {
+  duration: 5000,
+  transitionDuration: 500,
+  infinite: true,
+  indicators: true,
+  scale: 0.4,
+  arrows: true,
+};
 
-export default function Carousel() {
-  const bestSellers = [
-    {
-      id: 1,
-      name: "Cappucciano",
-      price: 4.99,
-      image: "/images/capuucino.png",
-    },
-    {
-      id: 2,
-      name: "Mocha",
-      price: 4.49,
-      image: "/images/mocha.png",
-    },
-    {
-      id: 3,
-      name: "Cocoa Mint",
-      price: 3.50,
-      image: "/images/cocoamint.png",
-    },
-    {
-      id: 4,
-      name: "Avocado Smoothie",
-      price: 5.25,
-      image: "/images/avocadosmoothie.png",
-    },
-    {
-      id: 5,
-      name: "Afogato",
-      price: 5.25,
-      image: "/images/afogato.png",
-    },
-    {
-      id: 6,
-      name: "Caramel Macciato",
-      price: 5.25,
-      image: "/images/caramelmacciato.png",
-    },
-    {
-      id: 7,
-      name: "Blueberry Cheesecake",
-      price: 5.25,
-      image: "/images/blueberrycake.png",
-    },
-  ];
+const Slideshow = () => {
+  const [quantity, setQuantity] = useState(0);
+  const dispatch = useDispatch();
 
+  // dispatch a single addToCart with the item payload; quantity handled by cart reducer
+  const handleAddToCart = (item) => {
+    dispatch(addToCart({ ...item, quantity }));
+    setQuantity(1);
+  };
   return (
-    <div className="w-full md:py-10 py-2">
-      <div className="flex flex-row justify-center gap-3">
-        <h2 className="text-3xl font-mono font-extrabold text-black/80 text-center mb-6">
-        Best Sellers
-      </h2>
-       <img src="/images/best-seller.png" alt="best seller" className="w-12 h-12"/>
+    <div className="slide-container">
+      <div className="flex gap-3 justify-center mb-0 md:mb-4">
+        <h1 className="font-serif font-extrabold text-black/90 text-2xl">
+          Best Sellers
+        </h1>
+        <img src="/images/best-seller.png" alt="Best" className="w-11 h-11" />
       </div>
+      <Zoom
+        {...zoomOutProperties}
+        prevArrow={<button className="custom-arrow prev">‹</button>}
+        nextArrow={<button className="custom-arrow next">›</button>}
+      >
+        {bestSellers.map((item) => (
+          <div
+            key={item.id}
+            className="each-slide flex items-center justify-center flex-col w-full h-55 md:h-auto  bg-white/10
+             backdrop-blur-md border border-e-black/20 border-t-black/20 rounded-xl py-8 "
+          >
+            <img
+              src={item.image}
+              alt={item.name}
+              className="w-2/4 md:w-1/2 md:h-60 h-28 object-cover object-center mb-1 md:mb-3 rounded-4xl border border-black/30 "
+            />
+            <h3 className="font-semibold text-xs md:text-lg text-center">
+              {item.name}
+            </h3>
+            <p className="text-amber-700 font-bold text-center">
+              ${item.price}
+            </p>
+            <Button
+              btnText={"Add to cart"}
+              endIcon={<FontAwesomeIcon icon={faCartShopping} />}
+              onClick={() => handleAddToCart(item)}
+            />
+           
+          </div>
+        ))}
+      </Zoom>
+    </div>
+  );
+};
 
-      <div className="relative w-full overflow-x-auto scrollbar-hide">
-        <div className="flex gap-6 px-4 snap-x snap-mandatory overflow-x-scroll pb-4">
-          {bestSellers.map((item) => (
-            <div
-              key={item.id}
-              className="md:min-w-[250px] md:max-w-[250px]  min-w-[150px] bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-4 shadow-md snap-center"
-            >
-              <img
-                src={item.image}
-                alt={item.name}
-                className="w-full md:h-40 h-20 object-contain mb-1 md:mb-3 rounded-xl"
-              />
-
-              <h3 className="font-semibold text-xs md:text-lg text-center">{item.name}</h3>
-              <p className="text-amber-700 font-bold text-center">${item.price}</p>
-
-              {/* <button className="w-full mt-3 py-2 bg-stone-600 hover:bg-stone-800 text-white text-xs md:text-xl rounded-xl font-medium transition-all">
-                Order Now
-              </button> */}
-            </div>
-          ))}
-        </div>
+function Carousel() {
+  return (
+    <div className="flex justify-center">
+      <div className="w-87 md:w-2xl">
+        <Slideshow />
       </div>
     </div>
   );
 }
+
+export default Carousel;

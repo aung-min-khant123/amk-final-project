@@ -17,8 +17,8 @@ export default function NavBar() {
   return (
     <nav
       className={`bg-gray-200/5 backdrop-blur-sm md:bg-white/10 border border-e-white/10 border-s-white/10
-      rounded-md mx-2  md:backdrop-blur-xl shadow-lg sticky top-0 z-50 md:h-17 transition-all duration-300 
-      ${isOpen ? "h-60" : "h-auto"} md:h-17`}
+      rounded-md mx-2 my-2 md:my-0  md:backdrop-blur-xl shadow-lg sticky top-0 z-50 md:h-17 transition-all duration-300 
+      ${isOpen ? "h-48" : "h-auto"} md:h-17`}
     >
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Link
@@ -87,8 +87,9 @@ export default function NavBar() {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-white/3 backdrop-blur-lg shadow-lg flex justify-center mx-2.5 my-2 rounded-xl">
-          <ul className="flex flex-col space-y-3.5 py-3 px-5 text-gray-950 font-mono">
+        <div className="md:hidden bg-white/3 backdrop-blur-md shadow-lg flex justify-center
+         mx-2.5 my-0.5 rounded-xl">
+          <ul className="flex flex-col space-y-1 py-2 px-5 text-gray-950 font-mono">
             <li>
               <Link href="/">Home</Link>
             </li>
