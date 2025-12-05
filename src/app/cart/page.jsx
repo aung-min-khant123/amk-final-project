@@ -28,18 +28,19 @@ export default function CartPage() {
 
   return (
     <div
-      className="container mx-auto my-5 px-4 py-8 max-w-6xl bg-white/5 backdrop-blur-xs backdrop-opacity-40 backdrop-brightness-95 rounded-2xl 
+      className="container mx-auto my-5 px-4 py-8 w-85 xl:w-5xl md:w-2xl  bg-white/10 backdrop-blur-lg backdrop-opacity-40
+       backdrop-brightness-95 rounded-2xl 
      border border-e-white/10 border-s-white/10"
     >
-      <div className="flex justify-center gap-5 my-4">
-        <img
-          src="/images/coffee.png"
-          alt="cart"
-          className="w-10 h-10 hover:size-14"
-        />
-        <h1 className="text-amber-700 text-3xl font-bold mb-6 text-center">
-          Your Cart
+      <div className="flex justify-center gap-3 my-4">
+        <h1 className="text-black/50 text-3xl font-extrabold font-sans mb-6 text-center">
+          Your Cart:
         </h1>
+        <img
+          src="/images/ecommerce.png"
+          alt="cart"
+          className="w-7 h-7 hover:size-10"
+        />
       </div>
 
       {cartItems.length === 0 ? (
@@ -55,7 +56,7 @@ export default function CartPage() {
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="w-24 h-24 sm:w-20 sm:h-20 object-contain rounded-lg mx-auto sm:mx-0"
+                  className="w-24 h-24 sm:w-20 sm:h-20 object-contain rounded-full mx-auto sm:mx-0"
                 />
                 <div className="text-center sm:text-left">
                   <p className="text-[16px] font-mono">{item.name}</p>
@@ -84,12 +85,20 @@ export default function CartPage() {
                   <FontAwesomeIcon icon={faPlus} />
                 </button>
               </div>
-              <input
+              <div className="flex gap-2 md:gap-6 flex-col md:flex-row my-2 font-mono font-bold text-stone-900 text-lg text-center">
+                <p className="bg-white/10 p-2 rounded-md mx-6 md:mx-0 mt-2 md:mt-0 border border-white/20">
+                  Size: {item.size}
+                </p>
+                <p className="bg-white/10 p-2 rounded-md mx-6 md:mx-0 border border-white/20">
+                  Sugar: {item.sugar}
+                </p>
+              </div>
+              {/* <input
                 type="text"
                 placeholder="Add note..."
                 className="border border-gray-300/20 bg-white/20 backdrop-blur-md text-white rounded-md px-3 py-1 text-sm 
               md:w-45 w-full focus:outline-none focus:ring-2 focus:ring-black/10 mt-2"
-              />
+              /> */}
 
               <div className="text-center sm:text-right w-full sm:w-auto">
                 <p className="text-white/70 font-extrabold">
@@ -99,7 +108,7 @@ export default function CartPage() {
 
               <button
                 onClick={() => dispatch(removeItemCompletely(item.id))}
-                className="text-red-800 hover:text-red-800 text-sm flex items-center gap-1 justify-center"
+                className="bg-white/60 p-2 mx-15 md:mx-0 rounded-md hover:rounded-xl text-black hover:text-stone-800 font-mono text-sm flex items-center gap-1 justify-center"
               >
                 <FontAwesomeIcon icon={faTrash} />
                 Remove
@@ -108,11 +117,11 @@ export default function CartPage() {
           ))}
 
           <div className="border-t pt-6 mt-6 text-right">
-            <p className="text-lg text-gray-700">
+            <p className="text-lg text-stone-950 font-mono font-extrabold">
               <span className="font-semibold">Total Quantity:</span>{" "}
               {totalQuantity}
             </p>
-            <p className="text-xl font-bold text-amber-700">
+            <p className="text-xl  text-stone-950 font-mono font-extrabold">
               Total Price: ${totalPrice.toFixed(2)}
             </p>
 

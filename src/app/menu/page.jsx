@@ -1,17 +1,34 @@
+// "use client"
+// import React from "react";
+// import Categories from "@/app/components/Categories";
+// import Products from "../components/Products";
 
-import React from 'react'
-import Categories from '@/app/components/Categories'
-import Products from '../components/Products'
+// function Page() {
+//   return (
+//     <>
+//       <div className="">
+//         <Categories />
+//       </div>
+//     </>
+//   );
+// }
+
+// export default Page;
+
+"use client";
+import React, { useState } from "react";
+import Categories from "@/app/components/Categories";
+import Products from "@/app/components/Products";
 
 function Page() {
+  const [activeCategory, setActiveCategory] = useState(null);
+
   return (
     <>
-     <div className="">
-       <Categories />
-       {/* <Products /> */}
-     </div>
+      <Categories activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
+      <Products categoryName={activeCategory} />
     </>
-  )
+  );
 }
 
-export default Page
+export default Page;
