@@ -1,17 +1,17 @@
 export const MenuCategories =[
     {
         id: 0,
-        image: "https://images.pexels.com/photos/885021/pexels-photo-885021.jpeg",
+        image: "/images/coffeeCategory.png",
         name: "Coffee"
     },
     {
         id: 1,
-        image: "https://images.pexels.com/photos/1772124/pexels-photo-1772124.jpeg",
+        image: "/images/teaCategory.png",
         name: "Tea"
     },
     {
         id: 2,
-        image: "https://images.pexels.com/photos/434295/pexels-photo-434295.jpeg",
+        image: "/images/smoothieCategory.png",
         name: "Smoothie"
     },
     {
@@ -35,6 +35,7 @@ export const products = [
     name: "Cappuccino",
     image: "/images/capuucino.png",
     price: 4.5,
+    options: {temperature:["Hot", "Iced"]},
     category: "Coffee",
   },
   {
@@ -42,6 +43,7 @@ export const products = [
     name: "Mocha",
     image: "/images/mocha.png",
     price: 3.8,
+    options: {temperature:["Hot", "Iced"]},
     category: "Coffee",
   },
   {
@@ -77,6 +79,7 @@ export const products = [
     name: "Tiramisu Latte",
     image: "/images/tiramisu.png",
     price: 5.5,
+    options: {temperature:["Hot", "Iced"]},
     category: "Coffee"
   },
   

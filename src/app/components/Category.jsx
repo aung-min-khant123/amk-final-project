@@ -73,16 +73,18 @@ import {
   faBlender,
   faBirthdayCake,
 } from "@fortawesome/free-solid-svg-icons";
+import Products from "./Products";
 
 function Category({ menu, isActive, onToggle }) {
   const { id, image, name } = menu;
 
   return (
+    <>
     <div
       key={id}
       className="border border-amber-900 rounded-2xl w-80 flex flex-col items-center bg-white/70 p-4 mb-8"
     >
-      <img src={image} className="w-50 h-40 object-cover rounded-2xl" />
+      <img src={image} className="w-50 h-50 object-cover object-center rounded-2xl" />
 
       <h3 className="text-center mt-2 font-serif text-gray-900">
         {name}
@@ -106,6 +108,11 @@ function Category({ menu, isActive, onToggle }) {
         onClick={onToggle}
       />
     </div>
+    {/* Mobile-only: show products under category */}
+    <div className="w-full md:hidden mt-2">
+      {isActive && <Products categoryName={name} />}
+    </div>
+    </>
   );
 }
 

@@ -6,6 +6,7 @@ import {
   removeFromCart,
   removeItemCompletely,
 } from "@/app/redux/cartSlice";
+import { useRouter } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faMinus, faTrash } from "@fortawesome/free-solid-svg-icons";
 
@@ -17,18 +18,23 @@ export default function CartPage() {
 
   const [checkoutSuccess, setCheckoutSuccess] = useState(false);
 
+  const router = useRouter();
   const handleCheckout = () => {
-    setCheckoutSuccess(true);
-
-    alert("Checkout Successful!");
-    setTimeout(() => {
-      setCheckoutSuccess(false);
-    }, 4000);
+    router.push("/payment");
   };
+
+  // const handleCheckout = () => {
+  //   setCheckoutSuccess(true);
+
+  //   alert("Checkout Successful!");
+  //   setTimeout(() => {
+  //     setCheckoutSuccess(false);
+  //   }, 4000);
+  // };
 
   return (
     <div
-      className="container mx-auto my-5 px-4 py-8 w-85 xl:w-5xl md:w-2xl  bg-white/10 backdrop-blur-lg backdrop-opacity-40
+      className="container mx-auto my-5 px-4 py-8 w-85 xl:w-6xl md:w-2xl  bg-white/10 backdrop-blur-lg backdrop-opacity-40
        backdrop-brightness-95 rounded-2xl 
      border border-e-white/10 border-s-white/10"
     >
@@ -92,6 +98,9 @@ export default function CartPage() {
                 <p className="bg-white/10 p-2 rounded-md mx-6 md:mx-0 border border-white/20">
                   Sugar: {item.sugar}
                 </p>
+                <p className="bg-white/10 p-2 rounded-md mx-6 md:mx-0 border border-white/20">
+                  Place: {item.choice}
+                </p>
               </div>
               {/* <input
                 type="text"
@@ -125,7 +134,7 @@ export default function CartPage() {
               Total Price: ${totalPrice.toFixed(2)}
             </p>
 
-            <button
+            {/* <button
               onClick={handleCheckout}
               className={`mt-5 px-6 py-3 rounded-lg text-white font-semibold transition-all duration-300
                 ${
@@ -135,6 +144,13 @@ export default function CartPage() {
                 }`}
             >
               {checkoutSuccess ? "Checkout Success" : "Proceed to Checkout"}
+            </button> */}
+            <button
+              onClick={handleCheckout}
+              className="mt-5 px-6 py-3 rounded-lg text-white font-semibold
+            bg-stone-600 hover:bg-stone-700 transition-all"
+            >
+              Proceed to Checkout
             </button>
           </div>
         </div>
