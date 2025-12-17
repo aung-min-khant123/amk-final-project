@@ -16,7 +16,7 @@ export default function CartPage() {
     (state) => state.cart
   );
 
-  const [checkoutSuccess, setCheckoutSuccess] = useState(false);
+  // const [checkoutSuccess, setCheckoutSuccess] = useState(false);
 
   const router = useRouter();
   const handleCheckout = () => {
@@ -34,7 +34,7 @@ export default function CartPage() {
 
   return (
     <div
-      className="container mx-auto my-5 px-4 py-8 w-85 xl:w-6xl md:w-2xl  bg-white/10 backdrop-blur-lg backdrop-opacity-40
+      className="container mx-auto my-5 px-4 py-8 w-85 xl:w-7xl md:w-full  bg-white/10 backdrop-blur-lg backdrop-opacity-40
        backdrop-brightness-95 rounded-2xl 
      border border-e-white/10 border-s-white/10"
     >
@@ -56,7 +56,7 @@ export default function CartPage() {
           {cartItems.map((item) => (
             <div
               key={item.id}
-              className="flex flex-col sm:flex-row sm:items-center sm:justify-between border-b pb-4 gap-4"
+              className="flex flex-col xl:flex-row md:items-center md:justify-between border-b pb-4 gap-5 md:gap-10"
             >
               <div className="md:flex items-center gap-4 sm:gap-8 w-full sm:w-auto md:max-w-40">
                 <img
@@ -91,7 +91,7 @@ export default function CartPage() {
                   <FontAwesomeIcon icon={faPlus} />
                 </button>
               </div>
-              <div className="flex gap-2 md:gap-6 flex-col md:flex-row my-2 font-mono font-bold text-stone-900 text-lg text-center">
+              <div className="flex gap-2 md:gap-3 flex-col my-2 font-mono font-bold text-stone-900 text-lg text-center">
                 <p className="bg-white/10 p-2 rounded-md mx-6 md:mx-0 mt-2 md:mt-0 border border-white/20">
                   Size: {item.size}
                 </p>
@@ -101,6 +101,11 @@ export default function CartPage() {
                 <p className="bg-white/10 p-2 rounded-md mx-6 md:mx-0 border border-white/20">
                   Place: {item.choice}
                 </p>
+                {item.temperature && (
+                  <p className="bg-white/10 p-2 rounded-md mx-6 md:mx-0 border border-white/20">
+                    Temperature: {item.temperature}
+                  </p>
+                )}
               </div>
               {/* <input
                 type="text"
