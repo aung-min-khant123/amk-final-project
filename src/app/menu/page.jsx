@@ -26,7 +26,9 @@ function Page() {
   return (
     <>
       <Categories activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
-      <Products categoryName={activeCategory} />
+      <div className="hidden md:block">
+        <Products categoryName={activeCategory} />
+      </div>
     </>
   );
 }

@@ -107,8 +107,8 @@ function Category({ menu, isActive, onToggle }) {
         endIcon={<FontAwesomeIcon icon={faArrowDown} />}
         onClick={onToggle}
       />
+      
     </div>
-    {/* Mobile-only: show products under category */}
     <div className="w-full md:hidden mt-2">
       {isActive && <Products categoryName={name} />}
     </div>
