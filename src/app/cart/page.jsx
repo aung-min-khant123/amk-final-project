@@ -85,7 +85,7 @@ export default function CartPage() {
                 </span>
 
                 <button
-                  onClick={() => dispatch(addToCart({ id: item.id, ...item }))}
+                  onClick={() => dispatch(addToCart({ ...item, quantity: 1 }))}
                   className="bg-gray-500 hover:bg-gray-600 text-white rounded-full w-6 h-6 flex items-center justify-center"
                 >
                   <FontAwesomeIcon icon={faPlus} />
