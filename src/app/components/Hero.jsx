@@ -10,6 +10,7 @@ function Hero() {
           playsInline
           muted
           className="absolute w-full h-full object-cover bg-fixed"
+          preload="none"
         >
           <source
             src="https://www.pexels.com/download/video/2849950/"

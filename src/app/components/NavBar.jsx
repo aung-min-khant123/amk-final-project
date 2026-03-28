@@ -45,7 +45,7 @@ export default function NavBar() {
           </Link>
         </div>
 
-        <ul className="hidden md:flex space-x-8 text-white/50 font-serif text-xl items-center">
+        <ul className="hidden md:flex space-x-8 text-white/50 font-sans font-extrabold text-xl items-center">
           <li>
             <Link href="/">Home</Link>
           </li>

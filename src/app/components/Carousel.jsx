@@ -8,7 +8,7 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
 import Link from "next/link";
-import { products } from "@/app/data/coffeeData/data"; // ✅ import data
+import { products } from "@/app/data/coffeeData/data"; 
 
 const zoomOutProperties = {
   duration: 5000,
