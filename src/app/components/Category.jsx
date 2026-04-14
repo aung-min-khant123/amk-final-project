@@ -92,7 +92,7 @@ function Category({ menu, isActive, onToggle }) {
 
         <h3 className="text-center mt-2 font-serif text-gray-900">
           {name}
-          {name.includes("Coffee") && (
+          {name.includes("Coffee") && ( 
             <FontAwesomeIcon icon={faCoffee} className="ml-2" />
           )}
           {name.includes("Tea") && (

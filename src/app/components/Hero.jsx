@@ -11,11 +11,13 @@ function Hero() {
           muted
           className="absolute w-full h-full object-cover bg-fixed"
           preload="none"
+          
         >
           <source
             src="https://www.pexels.com/download/video/2849950/"
             type="video/mp4"
             className="bg-amber-600"
+            lazy
           />
           Your browser does not support the video tag.
         </video>
