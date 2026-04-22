@@ -17,7 +17,7 @@ function Hero() {
             src="https://www.pexels.com/download/video/2849950/"
             type="video/mp4"
             className="bg-amber-600"
-            lazy
+            loading="lazy"
           />
           Your browser does not support the video tag.
         </video>

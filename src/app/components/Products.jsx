@@ -27,11 +27,12 @@
 
 // export default Products;
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Product from "./Product";
 import { useSelector } from "react-redux";
 
 function Products({ categoryName }) {
+
   const products = useSelector((state) => state.products.list);
 
   if (!categoryName) return null;
@@ -42,12 +43,15 @@ function Products({ categoryName }) {
 
   return (
     
+    <>
     <div className="mt-4 grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-x-0 sm:grid-cols-2
      gap-10 w-full place-items-center ">
       {showProducts.map((product) => (
         <Product key={product.id} product={product} />
       ))}
     </div>
+
+    </>
    
   );
 }
